@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/katja/.config/nvim'
+let g:netrw_dirhist_2='/home/katja'
+let g:netrw_dirhist_3='/home/katja/.gconf'
+let g:netrw_dirhist_4='/home/katja/.gconf/apps'
+let g:netrw_dirhist_5='/home/katja/.gconf/apps/nm-applet'
+let g:netrw_dirhist_6='/home/katja'
