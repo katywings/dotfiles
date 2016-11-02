@@ -1,0 +1,7 @@
+[user]
+	name = Katja Lutz
+	email = mail@katjalutz.ch
+[core]
+	editor = nvim
+[push]
+	default = simple
