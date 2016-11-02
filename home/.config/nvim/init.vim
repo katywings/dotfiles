@@ -127,3 +127,7 @@ autocmd bufwritepost *.js silent !standard-format -w %
 set autoread
 
 let g:deoplete#enable_at_startup = 1
+
+set wildignore+=*/node_modules/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
