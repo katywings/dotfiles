@@ -10,5 +10,7 @@ Dependencies:
     - `curl -L http://get.oh-my.fish | fish`
     - `omf install`
 - `pip3 install neovim`
+ - `thefuck` - (https://github.com/nvbn/thefuck)
+     - `sudo -H pip install thefuck`
 - `npm install -g tern`
 
