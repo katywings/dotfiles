@@ -1,6 +1,7 @@
 [roxterm profile]
-font=Hack 13
+font=Inconsolata-dz for Powerline Medium 13
 audible_bell=0
 colour_scheme=Roxterm-dark
 color_term=
 term=xterm-256color
+always_show_tabs=0
