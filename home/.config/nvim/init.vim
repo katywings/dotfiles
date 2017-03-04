@@ -29,6 +29,8 @@ set tabstop=2           " Render TABs using this many spaces.
 set shiftwidth=2        " Indentation amount for < and > commands.
 filetype plugin indent on
 
+set clipboard=unnamed
+
 set noerrorbells        " No beeps. 
 set modeline            " Enable modeline.
 set esckeys             " Cursor keys in insert mode.

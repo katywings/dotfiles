@@ -30,3 +30,5 @@ source "$HOME/.homesick/repos/homeshick/completions/homeshick.fish"
 . "$HOME/.homesick/repos/homeshick/homeshick.fish"
 
 
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
