@@ -4,6 +4,7 @@ source ~/.config/nvim/init_dein.vim
 " --------------------------------------------------------------------------
 " Basic configs
 
+set shell=/bin/sh
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 set background=dark " or dark
@@ -122,11 +123,22 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme= 'gruvbox'
 let g:airline_powerline_fonts=1
 
-let g:neomake_javascript_enabled_makers = ['standard']
-autocmd bufwritepost *.js silent !standard-format -w %
-set autoread
+" ------------------------------------------------------------------------
+" Standard formatter (disabled)
+" let g:neomake_javascript_enabled_makers = ['standard']
+" autocmd bufwritepost *.js silent !standard-format -w %
+" set autoread
 
 let g:deoplete#enable_at_startup = 1
+
+" Deoplete with flow
+function! StrTrim(txt)
+  return substitute(a:txt, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
+endfunction
+let g:flow_path = StrTrim(system('PATH=$(npm bin):$PATH && which flow'))
+if g:flow_path != 'flow not found'
+  let g:deoplete#sources#flow#flow_bin = g:flow_path
+endif
 
 set wildignore+=*/node_modules/*
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
