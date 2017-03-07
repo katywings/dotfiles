@@ -34,7 +34,10 @@ set clipboard=unnamed
 
 set noerrorbells        " No beeps. 
 set modeline            " Enable modeline.
-set esckeys             " Cursor keys in insert mode.
+" https://www.johnhawthorn.com/2012/09/vi-escape-delays/
+set timeoutlen=1000 ttimeoutlen=0
+" not working!
+" set esckeys             " Cursor keys in insert mode.
 set linespace=0         " Set line-spacing to minimum.
 set nojoinspaces        " Prevents inserting two spaces after punctuation on a join (J)
 
