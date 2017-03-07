@@ -20,6 +20,8 @@ call dein#add('tpope/vim-vinegar')
 call dein#add('tpope/vim-surround')
 call dein#add('tpope/vim-commentary')
 call dein#add('easymotion/vim-easymotion')
+call dein#add('Shougo/vimshell')
+
+call dein#add('pangloss/vim-javascript')
 
 " You can specify revision/branch/tag.
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' })

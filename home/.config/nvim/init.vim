@@ -28,6 +28,9 @@ set textwidth=0         " Hard-wrap long lines as you type them.
 set expandtab           " Insert spaces when TAB is pressed.
 set tabstop=2           " Render TABs using this many spaces.
 set shiftwidth=2        " Indentation amount for < and > commands.
+filetype plugin indent on
+
+set clipboard=unnamed
 
 set noerrorbells        " No beeps. 
 set modeline            " Enable modeline.
@@ -48,6 +51,10 @@ endif
 set display+=lastline
 set nostartofline       " Do not jump to first character with page commands.
 
+" Jump to last position
+if has("autocmd")
+ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 
 " --------------------------------------------------------------------------
 " Key bindings
@@ -143,3 +150,5 @@ endif
 set wildignore+=*/node_modules/*
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
+set wildignore+=*/shop/ProdukteBilder/*,*/shop/ProdukteDetails/*

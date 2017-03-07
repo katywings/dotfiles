@@ -7,17 +7,20 @@ endif
 set runtimepath+=$HOME/.dein-vim/repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin($HOME.'/.dein-vim')
+if dein#load_state($HOME.'/.dein-vim/')
+  call dein#begin($HOME.'/.dein-vim/')
 
-" Let dein manage dein
-" Required:
-call dein#add('Shougo/dein.vim')
+  " Let dein manage dein
+  " Required:
+  call dein#add('Shougo/dein.vim')
 
-" Add package include here
-source ~/.config/nvim/packages.vim
+  " Add or remove your plugins here:
+  source ~/.config/nvim/packages.vim
 
-" Required:
-call dein#end()
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
 
 " Required:
 filetype plugin indent on
