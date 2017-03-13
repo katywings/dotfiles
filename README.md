@@ -14,7 +14,7 @@ Dependencies:
 - `thefuck` - (https://github.com/nvbn/thefuck)
     - `sudo -H pip install thefuck`
 - `fish` - Installation is OS depending (http://fishshell.com/)
-    - on linux: add `ln -s /usr/bin/fish /usr/local/bin/fish`
+    - on linux: add `sudo ln -s /usr/bin/fish /usr/local/bin/fish`
     - (This is because MacOSX has a different bin path for fish, than UNIX)
 - `oh my fish` - See (https://github.com/oh-my-fish/oh-my-fish)
     - `curl -L http://get.oh-my.fish | fish`
