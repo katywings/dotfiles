@@ -1,5 +1,8 @@
 Dependencies:
 
+- Font: [Inconsolata (or Inconsolata-G) Powerline](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Inconsolata)
+- Terminal: iTerm or ROXTerm
+
 - `homeshick` - Installation is OS depending (https://github.com/andsens/homeshick/wiki/Installation)
 - `dein.vim`- (https://github.com/Shougo/dein.vim)
     - `curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh`
