@@ -9,6 +9,7 @@ Dependencies:
     - `sh installer.sh ~/.dein-vim`
     - `In Neovim: :call dein#install()`
 - `tmux`- Installation is OS depending (apt-get / brew install / etc.)
+- `xclip`!
 - Only on osx (Hint: https://evertpot.com/osx-tmux-vim-copy-paste-clipboard/):
     - `brew install reattach-to-user-namespace`
 - `thefuck` - (https://github.com/nvbn/thefuck)
