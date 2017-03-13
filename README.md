@@ -16,6 +16,7 @@ Dependencies:
 - `oh my fish` - See (https://github.com/oh-my-fish/oh-my-fish)
     - `curl -L http://get.oh-my.fish | fish`
     - `omf install`
-- `pip3 install neovim`
+- `sudo pip2 install neovim`
+- `sudo pip3 install neovim`
 - `npm install -g tern`
 
