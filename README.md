@@ -2,6 +2,9 @@ Dependencies:
 
 - `homeshick` - Installation is OS depending (https://github.com/andsens/homeshick/wiki/Installation)
 - `dein.vim`- (https://github.com/Shougo/dein.vim)
+    - `curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh`
+    - `sh installer.sh ~/.dein-vim`
+    - `In Neovim: :call dein#install()`
 - `tmux`- Installation is OS depending (apt-get / brew install / etc.)
 - Only on osx (Hint: https://evertpot.com/osx-tmux-vim-copy-paste-clipboard/):
     - `brew install reattach-to-user-namespace`
