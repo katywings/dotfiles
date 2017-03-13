@@ -30,7 +30,18 @@ set tabstop=2           " Render TABs using this many spaces.
 set shiftwidth=2        " Indentation amount for < and > commands.
 filetype plugin indent on
 
-set clipboard=unnamed
+if has("unix")
+  let s:uname = system("uname -s")
+  if s:uname == "Darwin"
+    set clipboard=unnamed
+    " Do Mac stuff here
+  else
+    set clipboard=unnamedplus
+  endif
+else
+  set clipboard=unnamed
+endif
+
 
 set noerrorbells        " No beeps. 
 set modeline            " Enable modeline.
