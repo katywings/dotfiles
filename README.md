@@ -18,5 +18,5 @@ Dependencies:
     - `omf install`
 - `sudo pip2 install neovim`
 - `sudo pip3 install neovim`
-- `npm install -g tern`
+- `sudo npm install -g tern`
 
