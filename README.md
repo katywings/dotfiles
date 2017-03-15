@@ -14,6 +14,7 @@ Dependencies:
     - `brew install reattach-to-user-namespace`
 - `thefuck` - (https://github.com/nvbn/thefuck)
     - `sudo -H pip install thefuck`
+- `[ag](https://github.com/ggreer/the_silver_searcher)`
 - `fish` - Installation is OS depending (http://fishshell.com/)
     - on linux: add `sudo ln -s /usr/bin/fish /usr/local/bin/fish`
     - (This is because MacOSX has a different bin path for fish, than UNIX)

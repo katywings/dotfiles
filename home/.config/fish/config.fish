@@ -29,6 +29,12 @@ set -gx fish_color_redirection B16286
 source "$HOME/.homesick/repos/homeshick/completions/homeshick.fish"
 . "$HOME/.homesick/repos/homeshick/homeshick.fish"
 
+set --universal fish_user_paths $fish_user_paths ~/.pub-cache/bin
 
+function my_key_bindings
+    fish_vi_key_bindings
+    bind -M insert -m default jk force-repaint
+end
+set -g fish_key_bindings my_key_bindings
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
