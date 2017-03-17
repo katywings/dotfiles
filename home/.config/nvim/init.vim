@@ -169,7 +169,7 @@ nnoremap <Leader>f :CtrlPMRUFiles<CR>
 
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 if executable('ag')
-  let g:ctrlp_user_command = 'ag %s --hidden --ignore=.git --ignore=.csv --ignore=.cache --ignore=node_modules --ignore=tmp -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s --hidden --ignore=.git --ignore=.csv --ignore=.cache --ignore=node_modules --ignore=tmp -l --ignore=shop/ProdukteBilder --ignore=shop/ProdukteDetails --ignore=shop/Admin/Backups --ignore=shop/resources/product_images_klein --ignore=shop/resources/product_images_micro --ignore=shop/resources/product_images_raw --nocolor -g ""'
 endif
 
 set wildignore+=*/.git/*
