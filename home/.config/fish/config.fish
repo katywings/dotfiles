@@ -30,6 +30,7 @@ source "$HOME/.homesick/repos/homeshick/completions/homeshick.fish"
 . "$HOME/.homesick/repos/homeshick/homeshick.fish"
 
 set --universal fish_user_paths $fish_user_paths ~/.pub-cache/bin
+set --universal fish_user_paths $fish_user_paths ~/.npm-global/bin
 
 function my_key_bindings
     fish_vi_key_bindings
