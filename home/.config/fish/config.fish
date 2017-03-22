@@ -36,6 +36,8 @@ function my_key_bindings
     fish_vi_key_bindings
     bind -M insert -m default jk force-repaint
 end
-set -g fish_key_bindings my_key_bindings
+# Vim Key Bindings for Fish disabled
+# set -g fish_key_bindings my_key_bindings
+set -g fish_key_bindings fish_default_key_bindings
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
