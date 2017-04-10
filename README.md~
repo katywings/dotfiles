@@ -2,7 +2,7 @@ Dependencies:
 
 - Font: [Inconsolata (or Inconsolata-G) Powerline](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Inconsolata)
 - Terminal: iTerm or ROXTerm
-  - Terminal Theme: [Gruvbox](https://github.com/morhetz/gruvbox-contrib)
+- Terminal Theme: [Gruvbox](https://github.com/morhetz/gruvbox-contrib)
 
 - `homeshick` - Installation is OS depending (https://github.com/andsens/homeshick/wiki/Installation)
 - `dein.vim`- (https://github.com/Shougo/dein.vim)
