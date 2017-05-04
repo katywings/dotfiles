@@ -34,3 +34,7 @@
 - `sudo pip2 install neovim`
 - `sudo pip3 install neovim`
 - `sudo npm install -g tern`
+
+# Everything else
+
+- Nice desktop colors: `#02E267`
