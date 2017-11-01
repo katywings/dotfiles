@@ -7,6 +7,8 @@
 - KDE: Konsole
 
 # Terminal tools
+- [z](https://github.com/rupa/z) (*Is included*)
+- [ag](https://github.com/ggreer/the_silver_searcher) or [ack](https://beyondgrep.com/)
 
 ## Homeshick
 - [Help](https://github.com/andsens/homeshick/wiki/Installation)
@@ -19,7 +21,7 @@
 - [Alfred](https://www.alfredapp.com/) 
 - [Setapp](https://setapp.com/de)
     - Rocket Typist
-- `[ag](https://github.com/ggreer/the_silver_searcher)`
+
 
 # Neovim and some shenanigans 
 > (probably will switch to a more lightweight vim config itf)
