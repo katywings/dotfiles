@@ -1,9 +1,10 @@
 # Base
 
 ## Terminals: 
-  - OSX: [iTerm](https://iterm2.com/)
-    - `You have mail.`: read them with `mail`, delete them with `sudo rm /var/mail/$USER`
-  - Ubuntu: Default
+- OSX: [iTerm](https://iterm2.com/)
+    - `You have mail.`: read them with `mail`, delete them with `sudo rm /var/mail/$USER`
+- Ubuntu: Terminal
+- KDE: Konsole
 
 # Terminal tools
 
@@ -17,7 +18,7 @@
 - [Caffeine](http://lightheadsw.com/caffeine/) or Lungo from [Setapp](https://setapp.com/de)
 - [Alfred](https://www.alfredapp.com/) 
 - [Setapp](https://setapp.com/de)
-  - Rocket Typist
+    - Rocket Typist
 - `[ag](https://github.com/ggreer/the_silver_searcher)`
 
 # Neovim and some shenanigans 
