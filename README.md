@@ -1,24 +1,22 @@
 # Base
 
-- Font: [Inconsolata (or Inconsolata-G) Powerline](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Inconsolata)
-  - Most terminals need the mono font (try that first)
-
-- Terminal: iTerm or ROXTerm
-  - Terminal Theme: [Gruvbox](https://github.com/morhetz/gruvbox-contrib)
-
-- `tmux`- Installation is OS depending (apt-get / brew install / etc.)
+## Terminals: 
+  - OSX: [iTerm](https://iterm2.com/)
+    - `You have mail.`: read them with `mail`, delete them with `sudo rm /var/mail/$USER`
+  - Ubuntu: Default
 
 # Terminal tools
 
-- `fish` - Installation is OS depending (http://fishshell.com/)
-    - on linux: add `sudo ln -s /usr/bin/fish /usr/local/bin/fish`
-    - (This is because MacOSX has a different bin path for fish, than UNIX)
-- `oh my fish` - See (https://github.com/oh-my-fish/oh-my-fish)
-    - `curl -L http://get.oh-my.fish | fish`
-    - `omf install`
-- `homeshick` - Installation is OS depending (https://github.com/andsens/homeshick/wiki/Installation)
-- `thefuck` - (https://github.com/nvbn/thefuck)
-    - `sudo -H pip install thefuck`
+## Homeshick
+- [Help](https://github.com/andsens/homeshick/wiki/Installation)
+- `git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick`
+
+## Other things
+### OSX
+- [Caffeine](http://lightheadsw.com/caffeine/) or Lungo from [Setapp](https://setapp.com/de)
+- [Alfred](https://www.alfredapp.com/) 
+- [Setapp](https://setapp.com/de)
+  - Rocket Typist
 - `[ag](https://github.com/ggreer/the_silver_searcher)`
 
 # Neovim and some shenanigans 
@@ -34,7 +32,3 @@
 - `sudo pip2 install neovim`
 - `sudo pip3 install neovim`
 - `sudo npm install -g tern`
-
-# Everything else
-
-- Nice desktop colors: `#02E267`
