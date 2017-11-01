@@ -2,6 +2,6 @@
 	name = Katja Lutz
 	email = mail@katjalutz.ch
 [core]
-	editor = nvim
+	editor = vim
 [push]
 	default = simple
