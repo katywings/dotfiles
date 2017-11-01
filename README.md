@@ -1,26 +1,34 @@
-Dependencies:
+# Base
 
-- Font: [Inconsolata (or Inconsolata-G) Powerline](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Inconsolata)
-- Terminal: iTerm or ROXTerm
+## Terminals: 
+  - OSX: [iTerm](https://iterm2.com/)
+    - `You have mail.`: read them with `mail`, delete them with `sudo rm /var/mail/$USER`
+  - Ubuntu: Default
 
-- `homeshick` - Installation is OS depending (https://github.com/andsens/homeshick/wiki/Installation)
+# Terminal tools
+
+## Homeshick
+- [Help](https://github.com/andsens/homeshick/wiki/Installation)
+- `git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick`
+
+## Other things
+### OSX
+- [Caffeine](http://lightheadsw.com/caffeine/) or Lungo from [Setapp](https://setapp.com/de)
+- [Alfred](https://www.alfredapp.com/) 
+- [Setapp](https://setapp.com/de)
+  - Rocket Typist
+- `[ag](https://github.com/ggreer/the_silver_searcher)`
+
+# Neovim and some shenanigans 
+> (probably will switch to a more lightweight vim config itf)
+
 - `dein.vim`- (https://github.com/Shougo/dein.vim)
     - `curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh`
     - `sh installer.sh ~/.dein-vim`
     - `In Neovim: :call dein#install()`
-- `tmux`- Installation is OS depending (apt-get / brew install / etc.)
 - `xclip`!
 - Only on osx (Hint: https://evertpot.com/osx-tmux-vim-copy-paste-clipboard/):
     - `brew install reattach-to-user-namespace`
-- `thefuck` - (https://github.com/nvbn/thefuck)
-    - `sudo -H pip install thefuck`
-- `fish` - Installation is OS depending (http://fishshell.com/)
-    - on linux: add `sudo ln -s /usr/bin/fish /usr/local/bin/fish`
-    - (This is because MacOSX has a different bin path for fish, than UNIX)
-- `oh my fish` - See (https://github.com/oh-my-fish/oh-my-fish)
-    - `curl -L http://get.oh-my.fish | fish`
-    - `omf install`
 - `sudo pip2 install neovim`
 - `sudo pip3 install neovim`
 - `sudo npm install -g tern`
-

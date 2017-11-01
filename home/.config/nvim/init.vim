@@ -89,12 +89,6 @@ endfunction
 " Toggle between normal and relative numbering.
 nnoremap <leader>r :call NumberToggle()<cr>
 
-" Open file menu
-nnoremap <Leader>o :CtrlP<CR>
-" Open buffer menu
-nnoremap <Leader>b :CtrlPBuffer<CR>
-" Open most recently used files
-nnoremap <Leader>f :CtrlPMRUFiles<CR>
 
 
 set hlsearch            " Highlight search results.
@@ -128,6 +122,8 @@ inoremap <Esc>   <nop>
 inoremap jk <Esc>
 
 
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
 
 " inoremap <Up>    <nop>
 " inoremap <Down>  <nop>
@@ -143,6 +139,9 @@ let g:airline#extensions#tabline#enabled = 2
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme= 'gruvbox'
 let g:airline_powerline_fonts=1
+
+nnoremap <Leader>e :VimFilerExplorer<CR>
+nnoremap <Leader>E :VimFiler<CR>
 
 " ------------------------------------------------------------------------
 " Standard formatter (disabled)
@@ -161,6 +160,20 @@ if g:flow_path != 'flow not found'
   let g:deoplete#sources#flow#flow_bin = g:flow_path
 endif
 
+" Open file menu
+nnoremap <Leader>o :CtrlP<CR>
+" Open buffer menu
+nnoremap <Leader>b :CtrlPBuffer<CR>
+" Open most recently used files
+nnoremap <Leader>f :CtrlPMRUFiles<CR>
+
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s --hidden --ignore=.git --ignore=.csv --ignore=.cache --ignore=node_modules --ignore=tmp -l --ignore=shop/ProdukteBilder --ignore=shop/ProdukteDetails --ignore=shop/Admin/Backups --ignore=shop/resources/product_images_klein --ignore=shop/resources/product_images_micro --ignore=shop/resources/product_images_raw --nocolor -g ""'
+endif
+
+set wildignore+=*/.git/*
+set wildignore+=*/.csv/*
 set wildignore+=*/node_modules/*
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
