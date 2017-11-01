@@ -10,6 +10,7 @@
 ## Homeshick
 - [Help](https://github.com/andsens/homeshick/wiki/Installation)
 - `git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick`
+- `homeshick clone katywings/dotfiles` 
 
 ## Other things
 ### OSX
