@@ -1,0 +1,64 @@
+"*":
+  _dartlang:
+    _errorsInitialized: true
+    _firstRun: true
+    _version: "0.7.1"
+  "atom-toolbar":
+    visible: false
+  "autocomplete-plus":
+    autoActivationDelay: 500
+  core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+        ".flowconfig"
+      ]
+      "source.json": [
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "tree-view"
+      "notifications"
+    ]
+    followSymlinks: false
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "gruvbox-plus-syntax"
+    ]
+  dartlang:
+    sdkLocation: "/usr/local/opt/dart/libexec"
+    sendUsage: false
+  editor: {}
+  "exception-reporting":
+    userId: "0a66f9b1-d33b-4fda-96af-b8cc70267fb7"
+  linter: {}
+  "linter-ui-default":
+    hidePanelWhenEmpty: false
+    panelHeight: 329
+    showPanel: true
+  nuclide:
+    "nuclide-home":
+      showHome: false
+    use:
+      "atom-ide-diagnostics-ui": false
+  "spell-check":
+    addKnownWords: true
+    knownWords: [
+      "alo"
+      "mallery"
+      "flyd"
+      "vuex"
+      "yaku"
+      "mobx"
+      "npm"
+    ]
+    locales: [
+      "en-US"
+    ]
+  welcome:
+    showOnStartup: false
