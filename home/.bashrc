@@ -21,7 +21,8 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories. (from ubuntu)
-shopt -s globstar
+# globstar option doesnt exist in osx, so i silenced the output
+shopt -s globstar &> /dev/null
 
 # make less more friendly for non-text input files, see lesspipe(1) (from ubuntu)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
