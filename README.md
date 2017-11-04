@@ -29,4 +29,4 @@
 ### Ubuntu
 
 - Add applications to gnome3 application menu: https://askubuntu.com/questions/79583/adding-custom-applications-to-gnome-launcher
-  - See `.confg/kw-resources/gnome3/desktop-files` for examples
+  - See `.config/kw-resources/gnome3/desktop-files` for examples
