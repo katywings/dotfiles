@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Name=Waterfox
+Type=Application
+Terminal=false
+Icon=/opt/waterfox/browser/chrome/icons/default/default256.png
+Exec=/opt/waterfox/waterfox
