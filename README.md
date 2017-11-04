@@ -20,6 +20,9 @@
 - vim `sudo apt-get install vim-gnome` use this for copy paste functionality)
 
 ## Other things
+- [Atom](https://atom.io)
+  - Syntax theme: `gruvbox-plus-syntax`
+
 ### OSX
 - [Caffeine](http://lightheadsw.com/caffeine/) or Lungo from [Setapp](https://setapp.com/de)
 - [Alfred](https://www.alfredapp.com/)
