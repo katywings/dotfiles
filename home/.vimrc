@@ -1,16 +1,19 @@
-source ~/.config/nvim/init_dein.vim
-
-
 " --------------------------------------------------------------------------
 " Basic configs
 
 set shell=/bin/sh
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
-set background=dark " or dark
-colorscheme gruvbox
+colorscheme default
+set background=dark " light or dark
 
-highlight ExtraWhitespace ctermbg=Brown guibg=Brown
+" Highlight extra whitespaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
 set listchars=eol:$,tab:>-,space:.,trail:~,extends:>,precedes:<
 set list
 
@@ -42,8 +45,8 @@ else
   set clipboard=unnamed
 endif
 
-
-set noerrorbells        " No beeps. 
+set belloff=all
+set noerrorbells        " No beeps.
 set modeline            " Enable modeline.
 " https://www.johnhawthorn.com/2012/09/vi-escape-delays/
 set timeoutlen=1000 ttimeoutlen=0
@@ -70,12 +73,11 @@ if has("autocmd")
  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-" --------------------------------------------------------------------------
-" Key bindings
 
 " Map the leader key to SPACE
 let mapleader="\<SPACE>"
 
+" ------------------------------------------------------------------------
 " Relative numbering
 function! NumberToggle()
   if(&relativenumber == 1)
@@ -89,8 +91,8 @@ endfunction
 " Toggle between normal and relative numbering.
 nnoremap <leader>r :call NumberToggle()<cr>
 
-
-
+" ------------------------------------------------------------------------
+" Search enhancements
 set hlsearch            " Highlight search results.
 set ignorecase          " Make searching case insensitive
 set smartcase           " ... unless the query has capital letters.
@@ -106,76 +108,27 @@ endif
 " Search and Replace
 nmap <Leader>s :%s//g<Left><Left>
 
-
-
-
+" ; is not useful anyway
 nnoremap ; :
-nnoremap Q @q 
 
+" easier shortcut
+nnoremap Q @q
 
-
-autocmd BufWritePost,BufEnter * Neomake
-
-
-
-inoremap <Esc>   <nop>
+" Bind jk to esc
 inoremap jk <Esc>
 
-
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprevious<CR>
-
+" Can be used to disable the arrow keys
 " inoremap <Up>    <nop>
 " inoremap <Down>  <nop>
-inoremap <Left>  <nop>
-inoremap <Right> <nop>
-
-
+" inoremap <Left>  <nop>
+" inoremap <Right> <nop>
 
 " ------------------------------------------------------------------------
-" Package configs
-
-let g:airline#extensions#tabline#enabled = 2
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme= 'gruvbox'
-let g:airline_powerline_fonts=1
-
-nnoremap <Leader>e :VimFilerExplorer<CR>
-nnoremap <Leader>E :VimFiler<CR>
-
-" ------------------------------------------------------------------------
-" Standard formatter (disabled)
-" let g:neomake_javascript_enabled_makers = ['standard']
-" autocmd bufwritepost *.js silent !standard-format -w %
-" set autoread
-
-let g:deoplete#enable_at_startup = 1
-
-" Deoplete with flow
-function! StrTrim(txt)
-  return substitute(a:txt, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
-endfunction
-let g:flow_path = StrTrim(system('PATH=$(npm bin):$PATH && which flow'))
-if g:flow_path != 'flow not found'
-  let g:deoplete#sources#flow#flow_bin = g:flow_path
-endif
-
-" Open file menu
-nnoremap <Leader>o :CtrlP<CR>
-" Open buffer menu
-nnoremap <Leader>b :CtrlPBuffer<CR>
-" Open most recently used files
-nnoremap <Leader>f :CtrlPMRUFiles<CR>
-
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-if executable('ag')
-  let g:ctrlp_user_command = 'ag %s --hidden --ignore=.git --ignore=.csv --ignore=.cache --ignore=node_modules --ignore=tmp -l --ignore=shop/ProdukteBilder --ignore=shop/ProdukteDetails --ignore=shop/Admin/Backups --ignore=shop/resources/product_images_klein --ignore=shop/resources/product_images_micro --ignore=shop/resources/product_images_raw --nocolor -g ""'
-endif
+" Paths to ignore
 
 set wildignore+=*/.git/*
 set wildignore+=*/.csv/*
 set wildignore+=*/node_modules/*
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
-
 set wildignore+=*/shop/ProdukteBilder/*,*/shop/ProdukteDetails/*
