@@ -22,7 +22,9 @@ export PATH=$PATH:~/.composer/vendor/bin
 . ~/.nvm/nvm.sh
 
 ### Docker
-type docker-machine &> /dev/null && eval "$(docker-machine env default)"
+# When this is enabled there always happens this error:
+# Error checking TLS connection: Host is not running
+# type docker-machine &> /dev/null && eval "$(docker-machine env default)"
 
 ### Ocaml
 # https://github.com/ocaml/opam-repository/issues/7593#issuecomment-282534517
