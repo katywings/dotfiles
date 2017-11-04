@@ -1,6 +1,6 @@
 # Base
 
-## Terminals: 
+## Terminals:
 - OSX: [iTerm](https://iterm2.com/)
     - `You have mail.`: read them with `mail`, delete them with `sudo rm /var/mail/$USER`
 - Ubuntu: Terminal
@@ -10,20 +10,23 @@
 - [z](https://github.com/rupa/z) (*Is included*)
 - [ag](https://github.com/ggreer/the_silver_searcher) or [ack](https://beyondgrep.com/)
 
+## Ubuntu
+- [vim] `sudo apt-get install vim-gnome` use this for copy paste functionality)
+
 ## Homeshick
 - [Help](https://github.com/andsens/homeshick/wiki/Installation)
 - `git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick`
-- `homeshick clone katywings/dotfiles` 
+- `homeshick clone katywings/dotfiles`
 
 ## Other things
 ### OSX
 - [Caffeine](http://lightheadsw.com/caffeine/) or Lungo from [Setapp](https://setapp.com/de)
-- [Alfred](https://www.alfredapp.com/) 
+- [Alfred](https://www.alfredapp.com/)
 - [Setapp](https://setapp.com/de)
     - Rocket Typist
 
 
-# Neovim and some shenanigans 
+# Neovim and some shenanigans
 > (probably will switch to a more lightweight vim config itf)
 
 - `dein.vim`- (https://github.com/Shougo/dein.vim)

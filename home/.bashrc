@@ -1,9 +1,55 @@
+# If not running interactively, don't do anything (from ubuntu)
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options (from ubuntu)
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it (from ubuntu)
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1) (from ubuntu)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.(from ubuntu)
+shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories. (from ubuntu)
+shopt -s globstar
+
+# make less more friendly for non-text input files, see lesspipe(1) (from ubuntu)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+### Because why not?
+alias python="python3"
+alias pip="pip3"
+
+### MySQL
+export PATH=$PATH:MYSQL=/usr/local/mysql/bin
+
+### Composer
+export PATH=$PATH:~/.composer/vendor/bin
+
+### Docker
+type docker-machine &> /dev/null && eval "$(docker-machine env default)"
+
+### Ocaml
+# https://github.com/ocaml/opam-repository/issues/7593#issuecomment-282534517
+export CDPATH=.
+type opam &> /dev/null && eval "$(opam config env)"
+
 ### RVM
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
 
 ### NVM
-export NVM_DIR="/Users/katja/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 ### Heroku Toolbelt
