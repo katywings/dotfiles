@@ -21,7 +21,8 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories. (from ubuntu)
-shopt -s globstar
+# globstar option doesnt exist in osx, so i silenced the output
+shopt -s globstar &> /dev/null
 
 # make less more friendly for non-text input files, see lesspipe(1) (from ubuntu)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -37,7 +38,9 @@ export PATH=$PATH:MYSQL=/usr/local/mysql/bin
 export PATH=$PATH:~/.composer/vendor/bin
 
 ### Docker
-type docker-machine &> /dev/null && eval "$(docker-machine env default)"
+# When this is enabled there always happens this error:
+# Error checking TLS connection: Host is not running
+# type docker-machine &> /dev/null && eval "$(docker-machine env default)"
 
 ### Ocaml
 # https://github.com/ocaml/opam-repository/issues/7593#issuecomment-282534517
@@ -91,6 +94,10 @@ if [ -x /usr/bin/dircolors ]; then
 	alias grep='grep --color=auto'
 	alias fgrep='fgrep --color=auto'
 	alias egrep='egrep --color=auto'
+else
+	# Tested on osx
+	export CLICOLOR=YES
+	export LSCOLORS="Gxfxcxdxbxegedabagacad"
 fi
 
 
