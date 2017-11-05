@@ -31,6 +31,9 @@ shopt -s globstar &> /dev/null
 alias python="python3"
 alias pip="pip3"
 
+### Custom NPM bin path
+export PATH=$PATH:~/.npm-global/bin
+
 ### MySQL
 export PATH=$PATH:MYSQL=/usr/local/mysql/bin
 
