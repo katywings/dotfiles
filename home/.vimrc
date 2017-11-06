@@ -20,6 +20,10 @@ set list
 "Is required for file watchers to work (as an example the webpack-dev-server
 set backupcopy=yes
 
+" Getting backspace to work
+" (https://stackoverflow.com/questions/11560201/backspace-key-not-working-in-vim-vi#11560415)
+set backspace=indent,eol,start
+
 set lazyredraw
 set showcmd             " Show (partial) command in status line.
 set showmatch           " Show matching brackets.
@@ -34,10 +38,11 @@ set shiftwidth=2        " Indentation amount for < and > commands.
 filetype plugin indent on
 
 if has("unix")
-  let s:uname = system("uname -s")
-  if s:uname == "Darwin"
-    set clipboard=unnamed
+  "Easier solutions didn't work https://stackoverflow.com/questions/10139972/vim-hasmacunix-or-hasmac-do-not-work
+  let s:uname = substitute(system('uname -s'), '\n', '', '')
+  if s:uname == "Darwin" || s:uname == "Mac"
     " Do Mac stuff here
+    set clipboard=unnamed
   else
     set clipboard=unnamedplus
   endif

@@ -31,6 +31,9 @@ shopt -s globstar &> /dev/null
 alias python="python3"
 alias pip="pip3"
 
+### Homebrew
+export PATH="/usr/local/sbin:$PATH"
+
 ### Custom NPM bin path
 export PATH=$PATH:~/.npm-global/bin
 
