@@ -37,6 +37,9 @@ export PATH="/usr/local/sbin:$PATH"
 ### Custom NPM bin path
 export PATH=$PATH:~/.npm-global/bin
 
+### Pub (dart) bin path
+export PATH=$PATH:~/.pub-cache/bin
+
 ### MySQL
 export PATH=$PATH:MYSQL=/usr/local/mysql/bin
 
