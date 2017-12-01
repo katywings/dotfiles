@@ -33,7 +33,8 @@
   dartlang:
     sdkLocation: "/usr/local/opt/dart/libexec"
     sendUsage: false
-  editor: {}
+  editor:
+    softWrap: true
   "exception-reporting":
     userId: "0a66f9b1-d33b-4fda-96af-b8cc70267fb7"
   linter: {}
