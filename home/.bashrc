@@ -77,6 +77,11 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 	debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+# For now this is not required
+# if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
+#     export TERM=xterm-256color
+# fi
+
 case "$TERM" in
 	xterm-color|*-256color) color_prompt=yes;;
 esac

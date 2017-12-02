@@ -3,18 +3,28 @@
 
 set shell=/bin/sh
 
-syntax on
-set termguicolors
-colorscheme default
-set background=dark " light or dark
+" use 16 colors
+set t_Co=16
+
+" 256 colors (colors will look wrong sometimes)
+" let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
+" let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
+" set termguicolors
+
+" Fixates background and colorscheme
+" set background=dark " light or dark
+" colorscheme default
+
+syntax enable
 
 " Better colors
-highlight LineNr ctermfg=LightBlue
-highlight Normal ctermfg=White
-highlight Comment ctermfg=Gray
+highlight LineNr ctermfg=LightBlue guifg=LightBlue
+highlight Normal ctermfg=White guifg=White
+highlight Comment ctermfg=Gray guifg=Gray
+highlight NonText ctermfg=Cyan guifg=Cyan
 
 " Highlight whitespaces
-highlight Whitespace ctermfg=DarkGray
+highlight Whitespace ctermfg=DarkGray guifg=DarkGray
 match Whitespace /\s/
 
 " Highlight extra whitespaces
