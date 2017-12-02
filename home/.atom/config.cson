@@ -1,4 +1,7 @@
 "*":
+  _dart:
+    _firstRun: true
+    _version: "1.0.1"
   _dartlang:
     _errorsInitialized: true
     _firstRun: true
@@ -30,17 +33,20 @@
       "one-dark-ui"
       "gruvbox-plus-syntax"
     ]
+  dart:
+    browserLocation: "/Applications/Google Chrome.app"
+    sdkLocation: "/usr/local/opt/dart/libexec"
   dartlang:
     sdkLocation: "/usr/local/opt/dart/libexec"
     sendUsage: false
-  editor: {}
+  editor:
+    softWrap: true
   "exception-reporting":
     userId: "0a66f9b1-d33b-4fda-96af-b8cc70267fb7"
   linter: {}
   "linter-ui-default":
     hidePanelWhenEmpty: false
-    panelHeight: 329
-    showPanel: true
+    panelHeight: 176
   nuclide:
     "nuclide-home":
       showHome: false
