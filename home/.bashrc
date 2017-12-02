@@ -110,3 +110,6 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# Use brew version of vim if installed
+[ -s "/usr/local/bin/vim" ] && alias vim='/usr/local/bin/vim'

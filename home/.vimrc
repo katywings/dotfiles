@@ -2,19 +2,26 @@
 " Basic configs
 
 set shell=/bin/sh
+
+syntax on
 set termguicolors
 colorscheme default
 set background=dark " light or dark
 
+" Better colors
+highlight LineNr ctermfg=LightBlue
+highlight Normal ctermfg=White
+highlight Comment ctermfg=Gray
+
+" Highlight whitespaces
+highlight Whitespace ctermfg=DarkGray
+match Whitespace /\s/
+
 " Highlight extra whitespaces
 highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
+2match ExtraWhitespace /\s\+$/
 
-set listchars=eol:$,tab:>-,space:.,trail:~,extends:>,precedes:<
+set listchars=eol:$,tab:__,space:.,trail:~,extends:>,precedes:<
 set list
 
 "Is required for file watchers to work (as an example the webpack-dev-server
