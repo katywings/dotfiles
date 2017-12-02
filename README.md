@@ -26,6 +26,7 @@
 ### OSX
 - [Caffeine](http://lightheadsw.com/caffeine/) or Lungo from [Setapp](https://setapp.com/de)
 - [Alfred](https://www.alfredapp.com/)
+- [Spectacle](https://github.com/eczarny/spectacle)
 - [Setapp](https://setapp.com/de)
     - Rocket Typist
 
