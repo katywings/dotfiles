@@ -3,6 +3,7 @@
 ## Terminals:
 - OSX: [iTerm](https://iterm2.com/)
     - `You have mail.`: read them with `mail`, delete them with `sudo rm /var/mail/$USER`
+    - Profile: General: Working Directory: "Reuse previous sessions directory"
 - Ubuntu: Terminal
 - KDE: Konsole
 
