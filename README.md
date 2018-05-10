@@ -19,6 +19,7 @@
 
 ### Ubuntu
 - vim `sudo apt-get install vim-gnome` use this for copy paste functionality)
+- ag `sudo apt install silversearcher-ag`
 
 ### OSX
 - vim `brew install vim` use this for copy paste functionality
