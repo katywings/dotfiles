@@ -19,6 +19,7 @@
 
 ### Ubuntu
 - vim `sudo apt-get install vim-gnome` use this for copy paste functionality)
+- ag `sudo apt install silversearcher-ag`
 
 ### OSX
 - vim `brew install vim` use this for copy paste functionality
@@ -33,6 +34,7 @@
 - [Spectacle](https://github.com/eczarny/spectacle)
 - [Setapp](https://setapp.com/de)
     - Rocket Typist
+- [Screenshot Path](https://discussions.apple.com/docs/DOC-9081): `$ defaults write com.apple.screencapture location /path/`
 
 ### Ubuntu
 

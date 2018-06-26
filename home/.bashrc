@@ -46,6 +46,9 @@ export PATH=$PATH:MYSQL=/usr/local/mysql/bin
 ### Composer
 export PATH=$PATH:~/.composer/vendor/bin
 
+### Elixir (Erlang)
+export PATH=$PATH:/opt/elixir/bin
+
 ### Docker
 # When this is enabled there always happens this error:
 # Error checking TLS connection: Host is not running
