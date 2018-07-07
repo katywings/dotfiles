@@ -18,7 +18,7 @@
 - `homeshick clone katywings/dotfiles`
 
 ### Ubuntu
-- vim `sudo apt-get install vim-gnome` use this for copy paste functionality)
+- vim `sudo apt-get install vim-gtk3` use this for "copy paste"-functionality) (vim-gnome works too)
 - ag `sudo apt install silversearcher-ag`
 
 ### OSX
