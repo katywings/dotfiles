@@ -3,6 +3,7 @@
 ## Terminals:
 - OSX: [iTerm](https://iterm2.com/)
     - `You have mail.`: read them with `mail`, delete them with `sudo rm /var/mail/$USER`
+    - Profile: General: Working Directory: "Reuse previous sessions directory"
 - Ubuntu: Terminal
 - KDE: Konsole
 
@@ -17,7 +18,8 @@
 - `homeshick clone katywings/dotfiles`
 
 ### Ubuntu
-- vim `sudo apt-get install vim-gnome` use this for copy paste functionality)
+- vim `sudo apt-get install vim-gtk3` use this for "copy paste"-functionality) (vim-gnome works too)
+- ag `sudo apt install silversearcher-ag`
 
 ### OSX
 - vim `brew install vim` use this for copy paste functionality
@@ -32,6 +34,7 @@
 - [Spectacle](https://github.com/eczarny/spectacle)
 - [Setapp](https://setapp.com/de)
     - Rocket Typist
+- [Screenshot Path](https://discussions.apple.com/docs/DOC-9081): `$ defaults write com.apple.screencapture location /path/`
 
 ### Ubuntu
 
