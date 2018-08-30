@@ -37,8 +37,17 @@ export PATH="/usr/local/sbin:$PATH"
 ### Custom NPM bin path
 export PATH=$PATH:~/.npm-global/bin
 
+### Dart sdk bin path
+export PATH=$PATH:/opt/dart-sdk/bin
+
 ### Pub (dart) bin path
 export PATH=$PATH:~/.pub-cache/bin
+
+### Clang
+export PATH=/opt/clang/bin:$PATH
+
+### Rust
+export PATH="$HOME/.cargo/bin:$PATH"
 
 ### MySQL
 export PATH=$PATH:MYSQL=/usr/local/mysql/bin
@@ -62,6 +71,9 @@ PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
 
 ### Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### Go binaries
+export PATH=$PATH:/usr/local/go/bin
 
 ### Homeshick (https://github.com/andsens/homeshick)
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
