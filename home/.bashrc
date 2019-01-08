@@ -134,6 +134,9 @@ alias l='ls -CF'
 # Use brew version of vim if installed
 [ -s "/usr/local/bin/vim" ] && alias vim='/usr/local/bin/vim'
 
+# Use gtk version of vim if installed
+[ -s "/usr/bin/vim.gtk3" ] && alias vim='/usr/bin/vim.gtk3'
+
 # Vscode
 [ -s "/Applications/Visual Studio Code.app" ] && alias code='open -a "/Applications/Visual Studio Code.app"'
 
