@@ -140,6 +140,10 @@ alias l='ls -CF'
 # Vscode
 [ -s "/Applications/Visual Studio Code.app" ] && alias code='open -a "/Applications/Visual Studio Code.app"'
 
+# Disable opencollective
+# https://github.com/opencollective/opencollective-postinstall
+export DISABLE_OPENCOLLECTIVE=true
+
 ### Include bash aliases file
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -163,3 +167,6 @@ fi
 
 # Add sbin directories to PATH.  This is useful on systems that have sudo
 [ -z "${PATH##*/sbin*}" ] || PATH=$PATH:/sbin:/usr/sbin
+
+# Local stuff, is not in version control
+[[ -s ~/.bashrc_local ]] && source ~/.bashrc_local
