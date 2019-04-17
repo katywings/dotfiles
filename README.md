@@ -17,6 +17,13 @@
 - `source "$HOME/.homesick/repos/homeshick/homeshick.sh"`
 - `homeshick clone katywings/dotfiles`
 
+### SSH Key
+(https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2)
+
+```bash
+ssh-keygen -t rsa
+```
+
 ### Ubuntu
 - vim `sudo apt-get install vim-gtk3` use this for "copy paste"-functionality) (vim-gnome works too)
 - ag `sudo apt install silversearcher-ag`
