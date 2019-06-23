@@ -4,6 +4,16 @@ case $- in
       *) return;;
 esac
 
+# Change the window title of X terminals
+case ${TERM} in
+       xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
+               PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
+               ;;
+       screen*)
+               PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
+               ;;
+esac
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options (from ubuntu)
 HISTCONTROL=ignoreboth
@@ -131,6 +141,11 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+alias np='nano -w PKGBUILD'
+alias more=less
+
 # Use brew version of vim if installed
 [ -s "/usr/local/bin/vim" ] && alias vim='/usr/local/bin/vim'
 
@@ -154,6 +169,12 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Bash won't get SIGWINCH if another process is in the foreground.
+# Enable checkwinsize so that bash will check the terminal size when
+# it regains control.  #65623
+# http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
+shopt -s checkwinsize
+
 # Default parameter to send to the "less" command
 # -R: show ANSI colors correctly; -i: case insensitive search
 LESS="-R -i"
@@ -164,9 +185,39 @@ LESS="-R -i"
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+# bash completion with sudo
+complete -cf sudo
 
 # Add sbin directories to PATH.  This is useful on systems that have sudo
 [ -z "${PATH##*/sbin*}" ] || PATH=$PATH:/sbin:/usr/sbin
+
+#
+# # ex - archive extractor
+# # usage: ex <file>
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+# better yaourt colors
+export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
 # Local stuff, is not in version control
 [[ -s ~/.bashrc_local ]] && source ~/.bashrc_local
