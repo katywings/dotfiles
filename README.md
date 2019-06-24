@@ -21,7 +21,10 @@
 (https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2)
 
 ```bash
-ssh-keygen -t rsa
+# RSA
+ssh-keygen -t rsa -b 4096
+# ed25519
+ssh-keygen -t ed25519
 ```
 
 ### Ubuntu
