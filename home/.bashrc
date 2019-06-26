@@ -219,5 +219,13 @@ ex ()
 # better yaourt colors
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
+# Start ssh-agent (https://wiki.archlinux.org/index.php/SSH_keys#SSH_agents)
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent > ~/.ssh-agent-thing
+fi
+if [[ ! "$SSH_AUTH_SOCK" ]]; then
+    eval "$(<~/.ssh-agent-thing)" > /dev/null;
+fi
+
 # Local stuff, is not in version control
 [[ -s ~/.bashrc_local ]] && source ~/.bashrc_local
