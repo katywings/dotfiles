@@ -41,6 +41,9 @@ shopt -s globstar &> /dev/null
 alias python="python3"
 alias pip="pip3"
 
+### Disable OSX zsh warning (https://www.addictivetips.com/mac-os/hide-default-interactive-shell-is-now-zsh-in-terminal-on-macos/)
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 ### Homebrew
 export PATH="/usr/local/sbin:$PATH"
 
