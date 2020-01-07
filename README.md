@@ -40,6 +40,7 @@ ssh-keygen -t ed25519
 ## Other things
 - [Atom](https://atom.io)
   - Syntax theme: `gruvbox-plus-syntax`
+- Chrome: Enable Omnibox Tab Switch: `chrome://flags/#omnibox-tab-switch-suggestions`
 
 ### OSX
 - [Caffeine](http://lightheadsw.com/caffeine/) or Lungo from [Setapp](https://setapp.com/de)
