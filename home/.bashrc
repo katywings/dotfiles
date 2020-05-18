@@ -71,6 +71,10 @@ export PATH=$PATH:~/.composer/vendor/bin
 ### Elixir (Erlang)
 export PATH=$PATH:/opt/elixir/bin
 
+### Deno
+export DENO_INSTALL="/home/katja/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 ### Docker
 # When this is enabled there always happens this error:
 # Error checking TLS connection: Host is not running
