@@ -156,6 +156,15 @@ alias gd='git diff --color-words=.'       # human-readable git diff
 gta() {
   git tag -a $1 -m $1
 }
+ford() {
+  for D in *; do
+    if [ -d "${D}" ]; then
+      cd "${D}"
+      eval $*;
+      cd ..;
+    fi
+  done
+}
 
 # Use brew version of vim if installed
 [ -s "/usr/local/bin/vim" ] && alias vim='/usr/local/bin/vim'
