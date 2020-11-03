@@ -165,6 +165,10 @@ ford() {
     fi
   done
 }
+# https://stackoverflow.com/a/1872007
+cdu () {
+  cd "${PWD%/$1/*}/$1";
+}
 
 # Use brew version of vim if installed
 [ -s "/usr/local/bin/vim" ] && alias vim='/usr/local/bin/vim'
