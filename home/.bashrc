@@ -94,6 +94,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ### Go binaries
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin
 
 ### Homeshick (https://github.com/andsens/homeshick)
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
