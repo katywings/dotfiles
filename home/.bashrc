@@ -154,6 +154,7 @@ alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
 alias gd='git diff --color-words=.'       # human-readable git diff
+alias gb="git for-each-ref --sort=committerdate refs/heads/ --format='%(color: red)%(committerdate:short) %(color: cyan)%(refname:short)'" # git branches sorted by date
 gta() {
   git tag -a $1 -m $1
 }
