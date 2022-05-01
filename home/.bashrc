@@ -4,6 +4,11 @@ case $- in
       *) return;;
 esac
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
 # Change the window title of X terminals
 case ${TERM} in
        xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
@@ -43,6 +48,12 @@ alias pip="pip3"
 
 ### Disable OSX zsh warning (https://www.addictivetips.com/mac-os/hide-default-interactive-shell-is-now-zsh-in-terminal-on-macos/)
 export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
 
 ### Homebrew
 export PATH="/usr/local/sbin:$PATH"
