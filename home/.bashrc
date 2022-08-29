@@ -46,6 +46,8 @@ shopt -s globstar &> /dev/null
 alias python="python3"
 alias pip="pip3"
 
+export LANG=en_US.UTF-8
+
 ### Disable OSX zsh warning (https://www.addictivetips.com/mac-os/hide-default-interactive-shell-is-now-zsh-in-terminal-on-macos/)
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
@@ -54,6 +56,8 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
+
+export CHROME_EXECUTABLE=/usr/bin/chromium
 
 ### Homebrew
 export PATH="/usr/local/sbin:$PATH"
@@ -182,6 +186,19 @@ ford() {
 cdu () {
   cd "${PWD%/$1/*}/$1";
 }
+sdocs() {
+  NOTES_DIR=$HOME/Projects/docs
+  NOTES_STATUS=`git -C $NOTES_DIR status --porcelain`
+  if [ ${#NOTES_STATUS} -ne 0 ]
+  then
+    git -C $NOTES_DIR add --all
+    git -C $NOTES_DIR commit -m "$NOTES_STATUS"
+    git -C $NOTES_DIR pull --rebase
+    git -C $NOTES_DIR push
+  else
+    git -C $NOTES_DIR pull --rebase
+  fi
+}
 
 # Use brew version of vim if installed
 [ -s "/usr/local/bin/vim" ] && alias vim='/usr/local/bin/vim'
@@ -191,6 +208,8 @@ cdu () {
 
 # Vscode
 [ -s "/Applications/Visual Studio Code.app" ] && alias code='open -a "/Applications/Visual Studio Code.app"'
+
+[ -s "/usr/share/vscodium-bin/bin/codium" ] && alias code='/usr/share/vscodium-bin/bin/codium'
 
 # Disable opencollective
 # https://github.com/opencollective/opencollective-postinstall
@@ -268,3 +287,6 @@ fi
 
 # Local stuff, is not in version control
 [[ -s ~/.bashrc_local ]] && source ~/.bashrc_local
+
+[[ -s $HOME/.asdf/asdf.sh ]] && . $HOME/.asdf/asdf.sh
+[[ -s $HOME/.asdf/completions/asdf.bash ]] && . $HOME/.asdf/completions/asdf.bash
