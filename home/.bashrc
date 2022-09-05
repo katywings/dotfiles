@@ -111,6 +111,13 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
 
+if [ -x "$(command -v podman)" ]; then
+  export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
+fi
+
+### asdf (https://asdf-vm.com)
+[ -s "$HOME/.asdf/asdf.sh" ] && . $HOME/.asdf/asdf.sh
+
 ### Homeshick (https://github.com/andsens/homeshick)
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 # Bash completion
@@ -290,3 +297,10 @@ fi
 
 [[ -s $HOME/.asdf/asdf.sh ]] && . $HOME/.asdf/asdf.sh
 [[ -s $HOME/.asdf/completions/asdf.bash ]] && . $HOME/.asdf/completions/asdf.bash
+
+# Recover cwd for new terminal tabs in Gnome
+[[ -s /etc/profile.d/vte.sh ]] && source /etc/profile.d/vte.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
