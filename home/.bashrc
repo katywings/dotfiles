@@ -123,9 +123,6 @@ source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 # Bash completion
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 
-### Z (https://github.com/rupa/z)
-[ -s "$HOME/.config/bash/z.sh" ] && . "$HOME/.config/bash/z.sh"
-
 ### Set colors if possible (copied from ubuntu original bashrc)
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -303,4 +300,10 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+### Z old (https://github.com/rupa/z)
+# [ -s "$HOME/.config/bash/z.sh" ] && . "$HOME/.config/bash/z.sh"
+
+### Z new (https://github.com/skywind3000/z.lua)
+eval "$(lua $HOME/.config/lua/z.lua --init bash)"
 
